@@ -1,0 +1,413 @@
+/* Importamos la fuente de texto "Roboto" */
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+
+body
+{
+  background: #e9ebee;                    /* Color del fondo */
+  font-family: Roboto,sans-serif;         /* Tipo de fuente de texto, es la que descargamos de GOOGLE FONTS */
+  font-size: 16px;                          /* Tamaño del texto */
+}
+
+/* Imagen de "cargando */
+.icono_load img
+{
+  /*border-radius: 100px;   /* Borde redondeado */
+  width: 30px;            /* Ancho */
+  height: 30px;           /* Altura */
+}
+
+/* Todos los enlaces */
+a
+{
+  color: #1176b6; /* Color del texto */
+}
+
+/* Todos los enlaces al pasar el muose sobre ellos */
+a:hover
+{
+  text-decoration: underline; /* Subrayado */
+}
+
+/* Para todos los Títulos de los Componentes */
+/* Título */
+.titulo
+{
+  color: #003855;                       /* Color de Texto */
+  font-family: 'Roboto',sans-serif;       /* Tipo de Fuente de Texto */
+  font-weight: 300;                       /* Ancho del texto */
+  font-size: 40px;                        /* Tamaño del a letra */
+  margin-bottom: 40px;                    /* Margen Exterior Inferior */
+  text-align: center;                     /* Alineación del Texto */
+}
+
+/* Para todos los Títulos de segundo nivel de los Componentes */
+/* Título2 */
+.titulo2
+{
+  color: #003855;                       /* Color de Texto */
+  font-family: 'Roboto',sans-serif;       /* Tipo de Fuente de Texto */
+  font-weight: 300;                       /* Ancho del texto */
+  font-size: 28px;                        /* Tamaño del a letra */
+  margin-top: 30px;                       /* Margen Exterior Superior */
+  margin-bottom: 10px;                    /* Margen Exterior Inferior */
+  text-align: center;                     /* Alineación del Texto */
+}
+
+
+/* Clase que se usa para indicar si un menú del encabezado se muestra en caso de haber o no un Usuario Logueado */
+.activada
+{
+  border-bottom: 3px solid orange !important;  /* Borde Inferior, el "important" es para asegurarnos que se vea el subrayado  */
+}
+
+
+
+/* ++++ ENCABEZADO ++++ */
+.encabezado
+{
+  /* Lo tomé de aquí: https://www.w3schools.com/css/css3_gradients.asp */
+  /*background: linear-gradient(rgb(36, 32, 32), rgb(214, 214, 209), rgb(36, 32, 32));/*#1176b6;    /*1176b6 Color de fondo  */
+  /*background: linear-gradient(rgb(110, 8, 8), rgb(214, 214, 209), rgb(110, 8, 8));/*#1176b6;    /*1176b6 Color de fondo  */
+  /*background: linear-gradient(rgb(58, 146, 24), rgb(214, 214, 209), rgb(58, 146, 24));/*#1176b6;    /*1176b6 Color de fondo  */
+  background: linear-gradient(to right, rgb(110, 8, 8) ,  rgb(214, 214, 209));
+  padding: 10px 0;          /* Margen Interior 10px arriba y abajo y 0px a los lados*/
+}
+        /* Imagen */
+        .encabezado .logo img
+        {
+          height: 22px;   /* Altura */
+        }
+
+            /* Input del texto de buscar */
+            .encabezado .buscar form input[type="text"]
+            {
+              width: 100%;                            /* Ancho, que abarque el 100% del ancho de su contenedor padre */
+              background: #fff;                     /* Color del fondo */
+              border: none;                           /* Bordes, se los quitamos */
+              font-size: 12px;                         /* Tamaño del texto */
+              padding: 0px 10px;                      /* Margen Interior, 0px arriba y abajo y 10px a los lados */
+              height: 25px;                           /* Altura */
+              line-height: 25px;                      /* Espacio entre las líneas */
+              border-radius: 3px 0 0 3px;             /* Borde redondeado, se redondean el izquierdo superior y el izquierdo inferior */
+              color: #6d6d6d;                       /* Color de texto */
+              font-family: 'Roboto',sans-serif;    /* Tipo de fuente de texto, la que descargamos de GOOGLE FONTS */
+            }
+
+            /* Botón "buscar"*/
+            .encabezado .buscar form button
+            {
+              width: 100%;                /* Ancho, en este caso el 100% de su contenedor padre */
+              background: #fff;         /* Color de fondo */
+              border: none;               /* Bordes, se los quitamos */
+              font-size: 12px;            /* Tamaño del texto */
+              padding: 0 10px;            /* Margen Interior, 0px arriba y abajo y 10px a los lados */
+              height: 25px;               /* Altura */
+              line-height: 25px;          /* Espacio entre las líneas */
+              border-radius: 0 3px 3px 0; /* Bordes redondeados, en este caos el superior derecho e inferior derecho */
+              cursor: pointer;            /* Al pasar el mouse sobre él que se ponga el cursor "puntero" */
+              color: #6d6d6d;           /* Color del texto */
+              margin-top: 2px;            /* Porque por alguna razón si lo quito el botón quede un poco más arriba que el input */
+            }
+
+            /* Al pasar el mouse sobre el Botón "buscar"*/
+            .encabezado .buscar form button:hover
+            {
+              background: #099efc;    /* Color de fondo */
+              color: #fff;            /* Color de texto */
+            }
+
+
+    /* Menú de Navegación */
+    .encabezado .menu
+    {
+      padding: 0; /* Margen Interior, se lo quitamos */
+    }
+
+      /* Enlaces del Menú de Navegación */
+      .encabezado .menu a
+      {
+        color: rgba(255,255,255,0.8);   /* Color del texto */
+        text-decoration: none;            /* Quitamos el subrayado */
+      }
+
+      /* Al pasar el mouse sobre los enlaces del Menú de Navegación */
+      .encabezado .menu a:hover
+      {
+        color: #000;   /* Color del texto */
+      }
+
+      /* Enlace con la clase "imagen" */
+      .encabezado .menu .imagen
+      {
+        display: inline-block;  /* Que este elemento tenga las propiedades de un elemento "bloque": padding, width, height */
+        width: 25px;            /* Ancho */
+        height: 25px;           /* Altura */
+        overflow: hidden;       /* Si el elemento no cabe ne su contenedor que el sobrante lo oculte */
+      }
+
+        /* Imagen del Avatar */
+        .encabezado .menu .imagen img
+        {
+          border-radius: 100px;   /* Borde redondeado */
+          width: 25px;            /* Ancho */
+          height: 25px;           /* Altura */
+        }
+
+
+
+
+/* ++++ HOME ++++ */
+      /* Jumbotron */
+      .jumbotron
+      {
+        text-align: center; /* Alineación del texto */
+      }
+
+
+
+
+/* ++++ USUARIOS ++++ */
+            /* Imagen de Avatar */
+            .avatar_usu img
+            {
+              border-radius: 100px;   /* Borde redondeado */
+              width: 40px;            /* Ancho */
+              height: 40px;           /* Altura */
+            }
+
+
+
+
+/* ++++ SIDEBAR ++++ */
+/* Contenedor de la Página */
+#user-card
+{
+  padding: 25px;  /* Margen Interior */
+}
+
+  /* Estadísticas */
+  #user-card .estadisticas
+  {
+    padding: 0; /* Margen Interior */
+  }
+
+  /* Contenedor de la Imagen del Avatar*/
+  #user-card .avatar
+  {
+    border-radius: 100px;   /* Borde redondeado */
+    width: 85px;            /* Ancho */
+    height: 85px;           /* Altura */
+    overflow: hidden;       /* Si el elemento no cabe ne su contenedor que el sobrante lo oculte */
+  }
+
+    /* Imagen del Avatar*/
+    #user-card .avatar img
+    {
+      width: 100%;
+    }
+
+    /* Contenedor del Nombre y Apellido  */
+    #user-card .name-surname
+    {
+      font-weight: 300;  /* Anchura del Texto */
+      font-size: 16px;    /* Tamaño del texto */
+    }
+
+      /* Enlaces del Nombre, Apellido */
+      #user-card .name-surname a
+      {
+        color: #555;  /* Color de Texto */
+      }
+
+      /* Contenedor del Nick */
+      #user-card .name-surname .nickname
+      {
+        color: #969393;  /* Color de Texto */
+      }
+
+        /* Contenedor de cada apartado de valores */
+        #user-card .following-data
+        {
+          background: #fff;                 /* Color de fondo */
+          border: 1px solid #e3e3e3;        /* Borde */
+          padding: 5px 3px;                   /* Margen Interior de 5px arriba y abajo y 3px a los lados  */
+          flex:1;                             /* Para que todas las cajas midan lo mismo */
+          text-align: center;                 /* Alineación del texto */
+          font-family: 'Roboto',sans-serif;   /* Tipo de fuente de texto, es la que descargamos de GOOGLE FONTS */
+        }
+
+          /* Al pasar el mouse sobre los enlaces */
+          #user-card .following-data a:hover
+          {
+            text-decoration: none;  /* Quitarel subrayado del Texto */
+          }
+
+          /* Span que contiene etiquetas y valores */
+          #user-card .label-stats,
+          #user-card .number-stats
+          {
+            display: block;               /* */
+            text-align: center;           /* Alineación del texto */
+            transition: all ease 300ms;  /* Transición para todas las propiedades */
+          }
+
+          /* Span que contiene etiquetas */
+          #user-card .label-stats
+          {
+            font-weight: bold;  /* Ancho del texto */
+            color:#555;       /* Color del texto */
+          }
+
+          /* Span que contiene los valores */
+          #user-card .number-stats
+          {
+            font-weight: bold;  /* Ancho del texto */
+            color:green;       /* Color del texto */
+          }
+
+          /* Al pasarel mouse sobre los valores de las estadísticas */
+          #user-card .following-data a:hover .number-stats
+          {
+            color:#cc1717;       /* Color del texto */
+          }
+
+
+
+
+/* +++ TIMELINE +++  */
+          /* Imagen de la Publicación */
+          .imagen_pub img
+          {
+            width: 40px;            /* Ancho */
+            height: 40px;           /* Altura */
+          }
+
+
+/* +++ PERFIL +++  */
+/* Contenedor de la Imagen del Avatar*/
+          /* Nombre */
+          #perfil-datos .nombre-completo .nombre
+          {
+            font-size: 24px;    /* Tamaño del texto */
+            font-weight: bold;  /* Anchura del texto */
+            color: #555;      /* Color del texto */
+          }
+
+          /* Nick */
+          #perfil-datos .nombre-completo .nick
+          {
+            font-size: 24px;    /* Tamaño del texto */
+          }
+
+          /* Estadístcias */
+          #perfil-datos .stats
+          {
+            color: #545454;       /* Color de texto */
+            font-weight: 300;       /* Ancho del texto  */
+            font-size: 16px;        /* Tamaño de la letra */
+            letter-spacing: 2px;    /* Espacio entre cada letra */
+          }
+
+          /* Título de Estadísticas */
+          #perfil-datos .titstats
+          {
+              color: #005385;                       /* Color de texto */
+              font-family: 'Open Sans', sans-serif;   /* Tipo de Fuente de texto */
+              font-weight: 300;                       /* Ancho del texto */
+              font-size: 30px;                        /* Tamaño del texto */
+              margin-bottom: 30px;                    /* Margen Exterior Inferior */
+          }
+
+
+/* +++ MENSAJES PRIVADOS +++  */
+      /* Menu de Navegación */
+      .Menu-MensPriv
+      {
+        padding-bottom: 10px;       /* Margen interior Inferior */
+        padding-left: 0;            /* Margen Interior Izquierdo */
+      }
+
+        /* Menú de Navegación */
+        .Menu-MensPriv nav
+        {
+          border-bottom: 1px solid #c7c8ca;   /* Borde Inferior */
+          padding-bottom: 20px;                 /* Margen Interior Inferior */
+        }
+
+          /* Enlaces del Menú de Navegación */
+          .Menu-MensPriv nav a
+          {
+            display: block;                     /* Convertimos al elemento en un elemento tipo "bloque" (cada elemento ocupa el 100% del ancho disponible) */
+            padding: 3px;                       /* Margen Interior */
+            font-family: 'Roboto',sans-serif;   /* Tipo de fuente de texto, es la que descargamos de GOOGLE FONTS */
+            color: #3d3d3d;                   /* Color de Texto */
+          }
+
+          /* Al pasar el mouse sobre enlaces del Menú de Navegación */
+          .Menu-MensPriv nav a:hover
+          {
+            background: #f2f2f2;   /* Color de fondo */
+            text-decoration: none;  /* Quitar el subrayado */
+          }
+
+            /* Icono */
+            .Menu-MensPriv nav a i
+            {
+              margin-right: 10px; /* Margen Derecho */
+            }
+
+
+
+
+
+/*-- NUEVO EN BOOTSTRAP 4:
+  Los tamaños de Columna en Bootstrap 4 son:
+    .col        Extra Pequeño   (Xtra Small)    Smartphones Vertical    Menos de 544px
+    .col-sm     Pequeño         (Small)         Spartphones Vertical    Mas de 544px y Menos de 768px
+    .col-md     Mediano         (Medium)        Tablets                 Más de 768px y Menos de 992px
+    .col-lg     Largo           (Large)         Computadoras            Más de 992px y Menos de 1200px
+    .col-xl     Extra Lago      (Xtra Large)    Computadoras            Más de 1200px
+*/
+
+
+/* ++++ MEDIAQUERIES ++++ */
+/* Dispositivo XL */
+@media screen and (max-width: 1199px)
+{
+
+}
+
+/* Dispositivo L */
+@media screen and (max-width: 991px)
+{
+
+
+}
+
+/* Dispositivo MD */
+@media screen and (max-width: 767px)
+{
+
+}
+
+/* Dispositivo SM */
+@media screen and (max-width: 575px)
+{
+  /* ++++ ENCABEZADO ++++ */
+    /* Menú de Navegación */
+    .encabezado .menu
+    {
+      padding: 15px 15px 0 15px;  /* Margen Interior: 15px arriba, 15px a la derecha, 0px abajo, 15px a la izquierda */
+    }
+
+
+  /* ++++ HOME (PÁGINA DE INICIO) ++++ */
+          .jumbotron h1
+          {
+            font-size: 30px;                        /* Tamaño del a letra */
+          }
+
+
+  /* ++++ PERFIL ++++ */
+
+}
